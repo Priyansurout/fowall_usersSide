@@ -2,6 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ShopRegistration from './ShopRegistration';
 import DashboardHome from './DashboardHome'; // Import your dashboard component
+import HomePage from './Client-interface';
+import ServiceHome from './ServiceAgent-Interface';
+import ServiceBookingApp from './Sample-Toshow';
 import './App.css';
 
 const App = () => {
@@ -17,6 +20,15 @@ const App = () => {
             <li>
               <Link to="/dashboard" className="text-blue-500 hover:underline">Dashboard</Link>
             </li>
+            <li>
+              <Link to="/client" className="text-blue-500 hover:underline">Client</Link>
+            </li>
+            <li>
+              <Link to="/serviceagent" className="text-blue-500 hover:underline">Service Agent</Link>
+            </li>
+            <li>
+              <Link to="/sampleShow" className="text-blue-500 hover:underline">Booking</Link>
+            </li>
           </ul>
         </nav>
 
@@ -25,6 +37,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<ShopRegistration />} />
             <Route path="/dashboard" element={<DashboardHome />} />
+            <Route path="/client" element={<HomePage />} />
+            <Route path="/serviceagent" element={<ServiceHome />} />
+            <Route path="/sampleShow" element={<ServiceBookingApp />} />
           </Routes>
         </main>
       </div>
